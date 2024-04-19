@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "Verificador de Rutas",
+    "version": "1.0",
+    "permissions": [
+      "activeTab",
+      "tabs",
+      "scripting"
+    ],
+    "host_permissions": [
+      "*://*/*"      ],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "action": {
+      "default_popup": "popup.html"
+    },
+     
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["verificar.js"]
+    }]
+}
+  
